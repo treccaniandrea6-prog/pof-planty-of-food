@@ -9,7 +9,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const API_KEY = '7573a8be1f734f87b1f7c08a33d95ddb';
+const PORT = process.env.PORT || 3000;
+const API_KEY = process.env.SPOONACULAR_API_KEY;
+
 const RECIPES_FILE_PATH = path.join(__dirname, 'data', 'recipes.json');
 const MEMORY_FILE_PATH = path.join(__dirname, 'data', 'memory.json');
 
@@ -50,15 +52,15 @@ function buildCharacteristicPhrase(recipe) {
 function normalizeRecipe(recipe) {
   return {
     id: recipe.id,
-    title: recipe.title,
-    sourceUrl: recipe.sourceUrl,
-    summary: stripHtml(recipe.summary),
+    title: recipe.title || '',
+    sourceUrl: recipe.sourceUrl || '',
+    summary: stripHtml(recipe.summary || ''),
     characteristicPhrase: buildCharacteristicPhrase(recipe),
     ingredients: recipe.extendedIngredients?.map(i => i.original) || [],
     instructions: recipe.analyzedInstructions?.[0]?.steps?.map(s => s.step) || [],
-    image: recipe.image,
-    readyInMinutes: recipe.readyInMinutes,
-    servings: recipe.servings
+    image: recipe.image || '',
+    readyInMinutes: recipe.readyInMinutes || null,
+    servings: recipe.servings || null
   };
 }
 
@@ -75,7 +77,7 @@ function writeJson(file, data) {
 }
 
 function extractPreferences(text) {
-  text = text.toLowerCase();
+  text = (text || '').toLowerCase();
   return {
     wantsQuick: text.includes('veloce'),
     wantsDinner: text.includes('cena'),
@@ -113,9 +115,10 @@ function updateMemory(sessionId, user, reply) {
 }
 
 function buildSearchQuery(message, session) {
-  let query = [];
+  const lowerMessage = (message || '').toLowerCase();
+  const query = [];
 
-  if (message.includes('pasta')) query.push('pasta');
+  if (lowerMessage.includes('pasta')) query.push('pasta');
   if (session?.preferences?.wantsVegan) query.push('vegan');
   if (session?.preferences?.wantsDinner) query.push('dinner');
   if (session?.preferences?.wantsQuick) query.push('quick');
@@ -126,11 +129,11 @@ function buildSearchQuery(message, session) {
 }
 
 function scoreRecipe(recipe, query) {
-  const text = (recipe.title + recipe.summary).toLowerCase();
+  const text = `${recipe.title} ${recipe.summary}`.toLowerCase();
   let score = 0;
 
-  query.split(' ').forEach(word => {
-    if (text.includes(word)) score += 2;
+  query.toLowerCase().split(' ').forEach(word => {
+    if (word && text.includes(word)) score += 2;
   });
 
   return score;
@@ -141,6 +144,7 @@ function searchLocal(query) {
 
   return recipes
     .map(r => ({ r, score: scoreRecipe(r, query) }))
+    .filter(x => x.score > 0)
     .sort((a, b) => b.score - a.score)
     .slice(0, 3)
     .map(x => x.r);
@@ -152,11 +156,10 @@ async function fetchFromAPI(query) {
     { params: { query, number: 3, apiKey: API_KEY } }
   );
 
-  const results = res.data.results;
-
+  const results = res.data.results || [];
   const detailed = [];
 
-  for (let r of results) {
+  for (const r of results) {
     const det = await axios.get(
       `https://api.spoonacular.com/recipes/${r.id}/information`,
       { params: { apiKey: API_KEY } }
@@ -166,6 +169,20 @@ async function fetchFromAPI(query) {
   }
 
   return detailed;
+}
+
+function mergeRecipes(existingRecipes, newRecipes) {
+  const map = new Map();
+
+  existingRecipes.forEach(recipe => {
+    map.set(recipe.id, recipe);
+  });
+
+  newRecipes.forEach(recipe => {
+    map.set(recipe.id, recipe);
+  });
+
+  return Array.from(map.values());
 }
 
 function formatRecipes(recipes) {
@@ -183,31 +200,60 @@ ${r.ingredients.slice(0, 5).map(i => `- ${i}`).join('\n')}
 `).join('\n---------------------\n');
 }
 
+app.get('/api/health', (req, res) => {
+  res.json({
+    success: true,
+    message: 'Server is working correctly'
+  });
+});
+
+app.get('/api/system-prompt', (req, res) => {
+  res.json({
+    success: true,
+    systemPrompt: getSystemPrompt()
+  });
+});
+
 app.post('/api/chat', async (req, res) => {
-  const { message, sessionId } = req.body;
+  try {
+    const { message, sessionId } = req.body;
 
-  const system = getSystemPrompt();
-  const session = getSession(sessionId);
+    if (!message || !sessionId) {
+      return res.status(400).json({
+        success: false,
+        reply: 'message o sessionId mancanti'
+      });
+    }
 
-  const query = buildSearchQuery(message, session);
+    if (!API_KEY) {
+      return res.status(500).json({
+        success: false,
+        reply: 'SPOONACULAR_API_KEY non configurata'
+      });
+    }
 
-  console.log('--- AGENT DECISION ---');
+    const system = getSystemPrompt();
+    const session = getSession(sessionId);
+    const query = buildSearchQuery(message, session);
 
-  let recipes = searchLocal(query);
-  let source = 'RAG locale';
+    console.log('--- AGENT DECISION ---');
 
-  if (recipes.length > 0) {
-    console.log('Uso RAG locale');
-  } else {
-    console.log('Uso API Spoonacular');
-    recipes = await fetchFromAPI(query);
-    source = 'Spoonacular';
+    let recipes = searchLocal(query);
+    let source = 'RAG locale';
 
-    const old = readJson(RECIPES_FILE_PATH);
-    writeJson(RECIPES_FILE_PATH, [...old, ...recipes]);
-  }
+    if (recipes.length > 0) {
+      console.log('Uso RAG locale');
+    } else {
+      console.log('Uso API Spoonacular');
+      recipes = await fetchFromAPI(query);
+      source = 'Spoonacular API';
 
-  const reply = `
+      const oldRecipes = readJson(RECIPES_FILE_PATH);
+      const mergedRecipes = mergeRecipes(oldRecipes, recipes);
+      writeJson(RECIPES_FILE_PATH, mergedRecipes);
+    }
+
+    const reply = `
 ${system.role}
 
 ${recipes.length === 0
@@ -216,15 +262,24 @@ ${recipes.length === 0
 }
 `;
 
-  updateMemory(sessionId, message, reply);
+    updateMemory(sessionId, message, reply);
 
-  res.json({
-    success: true,
-    reply,
-    recipes
-  });
+    return res.json({
+      success: true,
+      reply,
+      recipes
+    });
+  } catch (error) {
+    console.error('ERRORE /api/chat');
+    console.error(error.response?.data || error.message);
+
+    return res.status(500).json({
+      success: false,
+      reply: 'Errore interno del server'
+    });
+  }
 });
 
-app.listen(3000, () => {
-  console.log('Server running on http://localhost:3000');
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
 });
