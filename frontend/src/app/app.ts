@@ -345,7 +345,7 @@ type ChatResponse = {
   `]
 })
 export class App implements OnInit {
-  private readonly API_BASE_URL = 'https://pof-planty-of-food.onrender.com';
+  private readonly API_BASE_URL = 'http://localhost:3000';
 
   message = 'Caricamento...';
   userInput = '';

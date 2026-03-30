@@ -1,179 +1,311 @@
 [
   {
-    "id": 654959,
-    "title": "Pasta With Tuna",
-    "sourceUrl": "https://www.foodista.com/recipe/K6QWSKQM/pasta-with-tuna",
-    "summary": "Pasta With Tunan is a pescatarian main course. This recipe serves 4. For $1.68 per serving, this recipe covers 28% of your daily requirements of vitamins and minerals. One serving contains 423 calories, 24g of protein, and 10g of fat. 2 people have made this recipe and would make it again. This recipe from Foodista requires flour, parsley, non-fat milk, and parmesan cheese. From preparation to the plate, this recipe takes around 45 minutes. All things considered, we decided this recipe deserves a spoonacular score of 92%. This score is amazing. Pastan and Tuna Salad (Ensalada de Pasta y Atún), Tuna Pasta, and Tuna Pasta are very similar to this recipe.",
-    "characteristicPhrase": "Pasta With Tuna è una proposta gustosa che si prepara in circa 45 minuti e valorizza ingredienti come flour, green onions, non-fat milk.",
+    "id": 1001,
+    "title": "Quick Garlic Broccoli Pasta",
+    "sourceUrl": "https://pof.local/recipes/quick-garlic-broccoli-pasta",
+    "summary": "A fast vegan pasta with broccoli, garlic, olive oil, and lemon. It is light, practical, and ideal for a quick dinner.",
+    "characteristicPhrase": "Quick Garlic Broccoli Pasta is a fast plant-based dinner ready in about 20 minutes, with fresh broccoli, garlic, and lemon.",
     "ingredients": [
-      "2 tablespoons Flour",
-      "cup Green Onions, chopped",
-      "1 1/4 cups Non-Fat Milk",
-      "2 tablespoons Olive Oil",
-      "2 tablespoons Onion, minced",
-      "1/4 cup Parmesan Cheese, grated",
-      "cup Fresh Parsley or Basil, chopped",
-      "8 ounces Tubular Pasta",
-      "1 cup Frozen Peas, thawed",
-      "1 dsh Hot Pepper Sauce",
-      "6 1/2 ounces Can Water-Packed Tuna, drained"
+      "spaghetti",
+      "broccoli florets",
+      "garlic",
+      "olive oil",
+      "lemon juice",
+      "salt",
+      "black pepper"
     ],
     "instructions": [
-      "Cook pasta in a large pot of boiling water until al dente.",
-      "Drain and return to warm pot. Put olive oil in saucepan and add onion.",
-      "Saute until transparent. Stir in flour and cook for a few seconds and then whisk in milk. Stir constantly until this thickens.",
-      "Add peas, tuna (shredded into chunks,) parsley, green onions, cheese and hot pepper sauce.",
-      "Pour over pasta and stir gently to mix.",
-      "Serve at once."
+      "Bring a pot of salted water to a boil and cook the pasta.",
+      "Add the broccoli during the last few minutes of cooking.",
+      "Drain and keep a little pasta water aside.",
+      "Sauté garlic in olive oil, add pasta and broccoli, then finish with lemon juice."
     ],
-    "image": "https://img.spoonacular.com/recipes/654959-556x370.jpg",
-    "readyInMinutes": 45,
-    "servings": 4
+    "image": "",
+    "readyInMinutes": 20,
+    "servings": 2
   },
   {
-    "id": 648279,
-    "title": "Italian Tuna Pasta",
-    "sourceUrl": "https://www.foodista.com/recipe/4QNQXMDZ/italian-tuna-pasta",
-    "summary": "Italian Tuna Pastan is a Mediterranean main course. Watching your figure? This dairy free and pescatarian recipe has 464 calories, 38g of protein, and 3g of fat per serving. For $2.09 per serving, this recipe covers 35% of your daily requirements of vitamins and minerals. This recipe serves 3. 1 person found this recipe to be yummy and satisfying. From preparation to the plate, this recipe takes around 20 minutes. It is brought to you by Foodista. A mixture of chillies, pasta shells, juice of lemon, and a handful of other ingredients are all it takes to make this recipe so tasty. Taking all factors into account, this recipe earns a spoonacular score of 93%, which is excellent. Try Italian Tuna Pasta Salad, Pastan and Tuna Salad (Ensalada de Pasta y Atún), and Raw tomato sauce for pasta, the Italian pastan alla crudaiola for similar recipes.",
-    "characteristicPhrase": "Italian Tuna Pasta è una proposta gustosa che si prepara in circa 20 minuti e valorizza ingredienti come chillies, garlic, ground pepper.",
+    "id": 1002,
+    "title": "Creamy Avocado Basil Pasta",
+    "sourceUrl": "https://pof.local/recipes/creamy-avocado-basil-pasta",
+    "summary": "A vegan pasta with a creamy avocado and basil sauce, balanced by lemon and garlic.",
+    "characteristicPhrase": "Creamy Avocado Basil Pasta is a quick dairy-free pasta that feels rich while staying fully plant-based.",
     "ingredients": [
-      "2 fresh chillies",
-      "1 tablespoon minced garlic",
-      "Ground black pepper",
-      "2 lemons, juiced",
-      "1/2 cup of chopped parsley leaves",
-      "250 grams of pasta shells (cook pasta according to packet's instructions)",
-      "1 red pepper",
-      "400 grams of tuna, drained and flaked"
+      "pasta",
+      "ripe avocado",
+      "fresh basil",
+      "garlic",
+      "lemon juice",
+      "olive oil",
+      "salt",
+      "black pepper"
     ],
     "instructions": [
-      "Once pasta is cooked, drain and leave to cool for a minute.",
-      "Place small skillet on medium fire, drizzle olive oil, add in red pepper and stir-fry for 1-2 minutes. Put aside.Toss pasta shells, red pepper, tuna, parsley, garlic, chillies and lemon juice. Season with ground black pepper to taste, spoon into serving bowls."
+      "Cook the pasta in salted boiling water.",
+      "Blend avocado, basil, garlic, lemon juice, olive oil, salt, and pepper.",
+      "Drain the pasta and mix it with the avocado sauce.",
+      "Serve immediately."
     ],
-    "image": "https://img.spoonacular.com/recipes/648279-556x370.jpg",
-    "readyInMinutes": 20,
+    "image": "",
+    "readyInMinutes": 18,
+    "servings": 2
+  },
+  {
+    "id": 1003,
+    "title": "Tomato Spinach Chickpea Pasta",
+    "sourceUrl": "https://pof.local/recipes/tomato-spinach-chickpea-pasta",
+    "summary": "A quick vegan pasta with tomato, spinach, and chickpeas for a more filling dinner.",
+    "characteristicPhrase": "Tomato Spinach Chickpea Pasta is a simple high-fiber vegan dinner with tomato sauce, greens, and legumes.",
+    "ingredients": [
+      "pasta",
+      "canned chickpeas",
+      "spinach",
+      "canned tomatoes",
+      "garlic",
+      "onion",
+      "olive oil",
+      "salt"
+    ],
+    "instructions": [
+      "Cook the pasta in boiling salted water.",
+      "Sauté onion and garlic in olive oil.",
+      "Add tomatoes and chickpeas, then simmer briefly.",
+      "Add spinach, mix with pasta, and serve."
+    ],
+    "image": "",
+    "readyInMinutes": 25,
     "servings": 3
   },
   {
-    "id": 655806,
-    "title": "Pesto & Yogurt Pasta",
-    "sourceUrl": "https://www.foodista.com/recipe/Z4QRF6N7/pesto-yogurt-pasta",
-    "summary": "Pesto & Yogurt Pasta requires around 45 minutes from start to finish. For $1.45 per serving, you get a main course that serves 4. One serving contains 373 calories, 12g of protein, and 15g of fat. This recipe from Foodista requires farfalle, parmesan cheese, garlic, and nuts. This recipe is liked by 9 foodies and cooks. Taking all factors into account, this recipe earns a spoonacular score of 92%, which is great. Users who liked this recipe also liked Pasta With Yogurt Pesto, Pasta with Yogurt Pesto, and Yogurt Pesto Pasta Salad.",
-    "characteristicPhrase": "Pesto & Yogurt Pasta è una proposta gustosa che si prepara in circa 45 minuti e valorizza ingredienti come farfalle, flat leaf parsley, garlic.",
+    "id": 1004,
+    "title": "Tofu-Free Lentil Bolognese",
+    "sourceUrl": "https://pof.local/recipes/tofu-free-lentil-bolognese",
+    "summary": "A hearty vegan lentil sauce served over pasta, with no tofu and plenty of flavor.",
+    "characteristicPhrase": "Tofu-Free Lentil Bolognese is a satisfying plant-based comfort dish using lentils as the protein base.",
     "ingredients": [
-      "½ lb. Farfalle (use your favorite pasta or spaghetti)",
-      "1½ cups flat leaf Parsley",
-      "3 cloves garlic",
-      "¼ cup low-fat plain yogurt (can be substituted with Greek yogurt)",
-      "¼ cup mixed nuts",
-      "2 tablespoons Olive Oil",
-      "¼ cup grated Parmesan cheese",
-      "Salt & Pepper"
+      "pasta",
+      "brown lentils",
+      "canned tomatoes",
+      "carrot",
+      "celery",
+      "onion",
+      "garlic",
+      "olive oil"
     ],
     "instructions": [
-      "In a food processor, blend parsley, garlic, nuts and oil until smooth.",
-      "Mix in yogurt and cheese.  Season with salt and pepper.Cook pasta in a large pot of boiling water, stirring occasionally until al dente.Toss pasta and pesto sauce together in a large bowl."
+      "Cook lentils until tender if not already cooked.",
+      "Sauté onion, carrot, celery, and garlic in olive oil.",
+      "Add tomatoes and lentils, then simmer until thick.",
+      "Serve over cooked pasta."
     ],
-    "image": "https://img.spoonacular.com/recipes/655806-556x370.jpg",
-    "readyInMinutes": 45,
-    "servings": 4
-  },
-  {
-    "id": 1096306,
-    "title": "Vegan Chana Masala Curry",
-    "sourceUrl": "https://www.foodista.com/recipe/HXDMH8K8/vegan-chana-masala",
-    "summary": "Vegan Chana Masala Curry is a gluten free, dairy free, lacto ovo vegetarian, and vegan main course. This recipe makes 4 servings with 478 calories, 15g of protein, and 28g of fat each. For $1.66 per serving, this recipe covers 23% of your daily requirements of vitamins and minerals. 1 person were impressed by this recipe. This recipe is typical of Indian cuisine. This recipe from Foodista requires ground coriander, ground turmeric, ginger, and chilli powder. From preparation to the plate, this recipe takes approximately 30 minutes. Overall, this recipe earns a good spoonacular score of 60%. Try kala chana curry , how to make punjabi kala chana masala, Chickpea Curry (Chana Masala), and chana masala , how to make south indian chana masala for similar recipes.",
-    "characteristicPhrase": "Vegan Chana Masala Curry è una proposta gustosa che si prepara in circa 30 minuti e valorizza ingredienti come cooking oil, onions, ginger.",
-    "ingredients": [
-      "40ml cooking oil",
-      "2 small white onions (chopped finely)",
-      "10g of fresh ginger (minced)",
-      "1 tablespoon of garlic paste",
-      "2 teaspoons of ground cumin",
-      "1 1/4 teaspoons of chilli powder",
-      "2 teaspoons of ground coriander",
-      "1 1/4 teaspoon of ground turmeric",
-      "1 1/4 teaspoon of garam masala",
-      "1/4 teaspoon of ground black pepper",
-      "1/4 teaspoon of salt",
-      "1 teaspoon of coconut sugar",
-      "1 can of tomatoes",
-      "-2 cans chickpeas",
-      "-1/4 cup water",
-      "-150g coconut cream"
-    ],
-    "instructions": [
-      "Pop a large wok/pan onto the hob on medium heat, then add in the oil.Once the oil is hot, add in the onions and ginger and shallow fry for around 2-4 minutes.",
-      "Add the onion &amp; ginger mixture into a food processor/blender and blend until smooth and pop back into the wok/pan.",
-      "Add in the garlic paste, cumin, chili powder, ground coriander, turmeric, garam masala, pepper, salt and coconut sugar (optional)Stir until combined.",
-      "Add 1 tablespoon of oil if too dry.",
-      "Add in the tomatoes and chickpeas, stir to coat.If the mixture is too thick, you can add in 1/4 cup of water.",
-      "Add in the coconut cream and cook for around 20-25 minutes on low/medium heat covered with a lid, stirring frequently.The chana masala will thicken while its cooking.Once cooked, serve warm with rice, naan bread, popadom, samosas.. anything you fancy to make an Indian feast!"
-    ],
-    "image": "https://img.spoonacular.com/recipes/1096306-556x370.jpg",
+    "image": "",
     "readyInMinutes": 30,
     "servings": 4
   },
   {
-    "id": 664501,
-    "title": "Vegan Taco bowls with Cilantro Lime Cauliflower Rice",
-    "sourceUrl": "https://www.foodista.com/recipe/DKDKL4GJ/vegan-taco-bowls-with-cilantro-lime-cauliflower-rice",
-    "summary": "The recipe Vegan Taco bowls with Cilantro Lime Cauliflower Rice could satisfy your Mexican craving in roughly 3 hours. This recipe makes 4 servings with 529 calories, 13g of protein, and 48g of fat each. For $2.57 per serving, this recipe covers 26% of your daily requirements of vitamins and minerals. 6 people were glad they tried this recipe. Only a few people really liked this main course. A mixture of hass avocado, tomato, new mexico chili powder, and a handful of other ingredients are all it takes to make this recipe so tasty. It is brought to you by Foodista. It is a good option if you're following a gluten free, dairy free, paleolithic, and lacto ovo vegetarian diet. All things considered, we decided this recipe deserves a spoonacular score of 91%. This score is excellent. Vegan Taco bowls with Cilantro Lime Cauliflower Rice, Vegan Taco bowls with Cilantro Lime Cauliflower Rice, and Vegan Taco bowls with Cilantro Lime Cauliflower Rice are very similar to this recipe.",
-    "characteristicPhrase": "Vegan Taco bowls with Cilantro Lime Cauliflower Rice è una proposta gustosa che si prepara in circa 180 minuti e valorizza ingredienti come avocado oil, cauliflower, new mexico chili powder.",
+    "id": 1005,
+    "title": "Mild Broccoli Coconut Curry",
+    "sourceUrl": "https://pof.local/recipes/mild-broccoli-coconut-curry",
+    "summary": "A mild vegan curry with broccoli and coconut milk, designed for people who do not want spicy food.",
+    "characteristicPhrase": "Mild Broccoli Coconut Curry is a gentle and creamy vegan dinner with soft spice and a quick cooking time.",
     "ingredients": [
-      "2 tsp avocado oil or other extra virgin olive oil",
-      "½ large head cauliflower (you need 4 cups finely chopped)",
-      "¾ tsp New Mexico red chili powder",
-      "fresh cilantro, chopped",
-      "¼ tsp garlic powder",
-      "1 Hass avocado",
-      "1 tbsp fresh jalapeno, seeded and finely chopped",
-      "2 tsp fresh lime juice",
-      "1 onion",
-      "1 teaspoon salt",
-      "1 tomato",
-      "2 cups Walnuts (chopped)"
+      "broccoli",
+      "coconut milk",
+      "onion",
+      "garlic",
+      "mild curry powder",
+      "rice",
+      "olive oil",
+      "salt"
     ],
     "instructions": [
-      "Set the nuts to soak in a bowl of water 2-8 hours before preparing the meat.Preheat the oven to 375 F and line a baking sheet with aluminum foil.Finely chop the cauliflower into rice-sized pieces, or pulse in the food processor until the desired consistency. Toss with the oil and spread onto the baking sheet in an even layer.",
-      "Bake for 18 minutes, stirring halfway through.While the cauliflower rice is cooking, prepare the guacamole and taco meat.",
-      "Cut the avocado into large chunks and place into a small bowl.",
-      "Add the lime juice and mash the avocado to a chunky puree or your preferred consistency. Stir in the cilantro, jalapeno, onion and spices. Set aside.",
-      "Remove the nuts from the water and place into a small food processor. Discard the water. Pulse the nuts until theyve reached a ground meat consistency, I find about 5-7 pulses works.",
-      "Transfer to a bowl and stir in the salt, cumin, garlic powder, and red chili powder. Set aside.When the cauliflower is done, transfer to a mixing bowl while still warm and stir in the lime, cilantro, and salt.To assemble the bowls, layer 1 cup of the cauliflower rice in a bowl with taco nut meat, a dollop of guacamole, fresh tomatoes, and a sprinkling of fresh cilantro.",
-      "Serve immediately with an additional slice of lime if desired."
+      "Cook the rice separately.",
+      "Sauté onion and garlic in olive oil.",
+      "Add broccoli, curry powder, and coconut milk.",
+      "Simmer until the broccoli is tender and serve with rice."
     ],
-    "image": "https://img.spoonacular.com/recipes/664501-556x370.jpg",
-    "readyInMinutes": 180,
-    "servings": 4
+    "image": "",
+    "readyInMinutes": 25,
+    "servings": 2
   },
   {
-    "id": 1096053,
-    "title": "GF Vegan Creamy Broccoli Pasta",
-    "sourceUrl": "https://www.foodista.com/recipe/MZQCXKL2/gf-vegan-creamy-broccoli-pasta",
-    "summary": "GF Vegan Creamy Broccoli Pasta might be just the main course you are searching for. This recipe serves 4 and costs $2.01 per serving. One portion of this dish contains approximately 17g of protein, 27g of fat, and a total of 515 calories. 1 person found this recipe to be tasty and satisfying. If you have water, water, sea salt, and a few other ingredients on hand, you can make it. From preparation to the plate, this recipe takes approximately 35 minutes. It is brought to you by Foodista. It is a good option if you're following a gluten free, dairy free, lacto ovo vegetarian, and vegan diet. All things considered, we decided this recipe deserves a spoonacular score of 78%. This score is good. Similar recipes include Creamy Vegan Broccoli and Tempeh Bacon Pasta, Vegan Pasta : Creamy Pasta Pomodoro, and Vegan Creamy Broccoli Soup.",
-    "characteristicPhrase": "GF Vegan Creamy Broccoli Pasta è una proposta gustosa che si prepara in circa 35 minuti e valorizza ingredienti come full-fat coconut milk, water, nutritional yeast.",
+    "id": 1006,
+    "title": "Quick Vegan Rice Bowl with Chickpeas",
+    "sourceUrl": "https://pof.local/recipes/quick-vegan-rice-bowl-with-chickpeas",
+    "summary": "A fast rice bowl with chickpeas, cucumber, tomato, and lemon dressing.",
+    "characteristicPhrase": "Quick Vegan Rice Bowl with Chickpeas is a fresh and balanced meal for a light but complete dinner.",
     "ingredients": [
-      "13.5 oz full-fat coconut milk canned",
-      "1 cup water",
-      "1/3 cup nutritional yeast (non-fortified)",
-      "2 Tbsp plant-based buttery spread",
-      "4 tsp potato starch",
-      "1/2 cup cold water",
-      "1 tsp dried parsley",
-      "sea salt to taste",
-      "white pepper to taste",
-      "3 cups gluten-free fusilli",
-      "2 heads of broccoli (florets only) rinsed and chopped"
+      "cooked rice",
+      "canned chickpeas",
+      "cucumber",
+      "tomatoes",
+      "lettuce",
+      "lemon juice",
+      "olive oil",
+      "salt"
     ],
     "instructions": [
-      "Add the coconut milk, 1 cup of water, nutritional yeast and plant-based buttery spread to a medium saucepan and bring to a boil. Then, reduce the heat to medium-low and simmer for 6-7 minutes.Meanwhile, create a slurry by whisking together the potato starch and 1/2 cup of cold water in a small bowl.Slowly add the potato starch slurry to the simmering mixture in the saucepan on the stovetop.",
-      "Whisk them together, and then let the sauce thicken over medium-low heat for another 3-4 minutes, stirring often.Once the sauce has reached the desired thickness, then remove it from the heat and stir in the dried parsley. Season to taste with salt and white pepper. Cover and set aside.Follow package instructions for cooking your pasta noodles until they are al dente.While the pasta is boiling, place the chopped broccoli in a steamer basket.",
-      "Add an inch of water to a large pot.",
-      "Place the filled basket inside the pot and bring to a boil on the stove.Reduce heat to medium, and steam the broccoli covered for ~5 minutes, or until just tender. Then, remove the pot from heat and uncover.To serve, divide the pasta noodles between 4 bowls. Top each with 1/4 of the steamed broccoli and 1/4 of the warm sauce. Enjoy!"
+      "Warm the rice and chickpeas if desired.",
+      "Chop cucumber and tomatoes.",
+      "Assemble everything in a bowl.",
+      "Dress with olive oil, lemon juice, and salt."
     ],
-    "image": "https://img.spoonacular.com/recipes/1096053-556x370.jpg",
-    "readyInMinutes": 35,
-    "servings": 4
+    "image": "",
+    "readyInMinutes": 15,
+    "servings": 2
+  },
+  {
+    "id": 1007,
+    "title": "High-Protein Vegan Pasta with Beans",
+    "sourceUrl": "https://pof.local/recipes/high-protein-vegan-pasta-with-beans",
+    "summary": "A protein-focused vegan pasta using white beans, tomato, and greens.",
+    "characteristicPhrase": "High-Protein Vegan Pasta with Beans is designed for a more filling dinner with legumes and simple pantry ingredients.",
+    "ingredients": [
+      "whole wheat pasta",
+      "white beans",
+      "spinach",
+      "canned tomatoes",
+      "garlic",
+      "olive oil",
+      "salt",
+      "black pepper"
+    ],
+    "instructions": [
+      "Cook the pasta in salted water.",
+      "Sauté garlic in olive oil.",
+      "Add tomatoes and beans, then simmer briefly.",
+      "Add spinach and combine with the pasta."
+    ],
+    "image": "",
+    "readyInMinutes": 22,
+    "servings": 3
+  },
+  {
+    "id": 1008,
+    "title": "Roasted Vegetable Couscous",
+    "sourceUrl": "https://pof.local/recipes/roasted-vegetable-couscous",
+    "summary": "A simple vegan couscous with roasted zucchini, peppers, and carrots.",
+    "characteristicPhrase": "Roasted Vegetable Couscous is a colorful plant-based dinner with soft roasted vegetables and quick couscous.",
+    "ingredients": [
+      "couscous",
+      "zucchini",
+      "bell pepper",
+      "carrot",
+      "olive oil",
+      "lemon juice",
+      "salt",
+      "parsley"
+    ],
+    "instructions": [
+      "Roast chopped vegetables with olive oil and salt.",
+      "Prepare couscous according to package instructions.",
+      "Mix couscous with roasted vegetables.",
+      "Finish with lemon juice and parsley."
+    ],
+    "image": "",
+    "readyInMinutes": 30,
+    "servings": 3
+  },
+  {
+    "id": 1009,
+    "title": "Quick Vegan Mushroom Pasta",
+    "sourceUrl": "https://pof.local/recipes/quick-vegan-mushroom-pasta",
+    "summary": "A savory pasta with mushrooms, garlic, parsley, and olive oil.",
+    "characteristicPhrase": "Quick Vegan Mushroom Pasta is a fast and earthy dinner with mushrooms and garlic, ideal for weeknights.",
+    "ingredients": [
+      "pasta",
+      "mushrooms",
+      "garlic",
+      "parsley",
+      "olive oil",
+      "salt",
+      "black pepper"
+    ],
+    "instructions": [
+      "Cook the pasta in salted water.",
+      "Sauté mushrooms and garlic in olive oil.",
+      "Add pasta and a little pasta water.",
+      "Finish with parsley, salt, and pepper."
+    ],
+    "image": "",
+    "readyInMinutes": 20,
+    "servings": 2
+  },
+  {
+    "id": 1010,
+    "title": "Lemon Pea Pasta",
+    "sourceUrl": "https://pof.local/recipes/lemon-pea-pasta",
+    "summary": "A fresh vegan pasta with peas, lemon, and olive oil.",
+    "characteristicPhrase": "Lemon Pea Pasta is a bright and simple plant-based dish for a quick dinner with very few ingredients.",
+    "ingredients": [
+      "pasta",
+      "frozen peas",
+      "lemon zest",
+      "lemon juice",
+      "olive oil",
+      "garlic",
+      "salt",
+      "black pepper"
+    ],
+    "instructions": [
+      "Cook the pasta and add peas near the end.",
+      "Drain and reserve some pasta water.",
+      "Warm garlic in olive oil.",
+      "Mix everything with lemon zest and lemon juice."
+    ],
+    "image": "",
+    "readyInMinutes": 17,
+    "servings": 2
+  },
+  {
+    "id": 1011,
+    "title": "Vegan Sweet Potato Bean Bowl",
+    "sourceUrl": "https://pof.local/recipes/vegan-sweet-potato-bean-bowl",
+    "summary": "A nourishing bowl with roasted sweet potato, black beans, and greens.",
+    "characteristicPhrase": "Vegan Sweet Potato Bean Bowl is a balanced dinner with legumes, vegetables, and a naturally sweet roasted base.",
+    "ingredients": [
+      "sweet potato",
+      "black beans",
+      "spinach",
+      "olive oil",
+      "paprika",
+      "lemon juice",
+      "salt"
+    ],
+    "instructions": [
+      "Roast diced sweet potato with olive oil and paprika.",
+      "Warm the black beans.",
+      "Arrange everything over spinach.",
+      "Finish with lemon juice and salt."
+    ],
+    "image": "",
+    "readyInMinutes": 30,
+    "servings": 2
+  },
+  {
+    "id": 1012,
+    "title": "Quick Zucchini Tomato Pasta",
+    "sourceUrl": "https://pof.local/recipes/quick-zucchini-tomato-pasta",
+    "summary": "A light vegan pasta with zucchini, cherry tomatoes, and garlic.",
+    "characteristicPhrase": "Quick Zucchini Tomato Pasta is a fast weeknight recipe with fresh vegetables and simple Mediterranean flavors.",
+    "ingredients": [
+      "pasta",
+      "zucchini",
+      "cherry tomatoes",
+      "garlic",
+      "olive oil",
+      "basil",
+      "salt",
+      "black pepper"
+    ],
+    "instructions": [
+      "Cook the pasta in salted boiling water.",
+      "Sauté zucchini in olive oil.",
+      "Add tomatoes and garlic and cook briefly.",
+      "Toss with pasta and fresh basil."
+    ],
+    "image": "",
+    "readyInMinutes": 20,
+    "servings": 2
   }
 ]

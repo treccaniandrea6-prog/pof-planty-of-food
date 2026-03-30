@@ -1,59 +1,240 @@
-# Frontend
+# POF: Planty of Food
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.0.
+POF: Planty of Food is a full-stack AI-powered recipe assistant developed as part of the Start2Impact learning path.
 
-## Development server
+The application allows users to discover sustainable plant-based recipes through a conversational chat interface. It integrates an Angular frontend, a Node/Express backend, external APIs, conversational memory, and a RAG-like retrieval system.
 
-To start a local development server, run:
+---
 
-```bash
+## 🌐 Live Project
+
+- Frontend: https://pof-planty-frontend.netlify.app
+- Backend: https://pof-planty-of-food.onrender.com
+- GitHub: https://github.com/treccaniandrea6-prog/pof-planty-of-food
+
+---
+
+## 🎯 Project Goal
+
+The goal of this project is to build an intelligent assistant capable of:
+
+- answering user queries via chat
+- retrieving plant-based recipes
+- adapting to user preferences
+- combining local data and external APIs
+- simulating an AI agent workflow
+
+---
+
+## 🧰 Tech Stack
+
+### Frontend
+
+- Angular
+- TypeScript
+- HTML
+- CSS
+
+### Backend
+
+- Node.js
+- Express
+
+### External API
+
+- Spoonacular API
+
+### Deployment
+
+- Netlify (frontend)
+- Render (backend)
+
+### Version Control
+
+- Git
+- GitHub
+
+---
+
+## ⚙️ Main Features
+
+- Chat-based interface
+- Real-time frontend ↔ backend communication
+- Recipe retrieval from API
+- Recipe normalization
+- Conversational memory
+- Query optimization
+- RAG-like retrieval system
+- Fully deployed full-stack application
+
+---
+
+## 🔌 API Endpoints
+
+### Health Check
+
+GET /api/health
+
+### Chat Endpoint
+
+POST /api/chat
+
+Example request:
+{
+"message": "quick vegan pasta",
+"sessionId": "session-001"
+}
+
+### System Prompt
+
+GET /api/system-prompt
+
+---
+
+## 🧠 AI Agent Logic
+
+The system follows these steps:
+
+1. Receive user message
+2. Extract preferences (vegan, quick, dinner, etc.)
+3. Build optimized search query
+4. Search local dataset
+5. If results exist → return them
+6. Otherwise → call Spoonacular API
+7. Normalize recipe data
+8. Store recipes locally
+9. Update conversation memory
+10. Return structured response
+
+---
+
+## 🧩 Conversational Memory
+
+The backend stores session-based memory in JSON files.
+
+It includes:
+
+- user messages
+- assistant replies
+- detected preferences (vegan, quick, dinner, etc.)
+
+This allows the assistant to adapt future responses.
+
+---
+
+## 📚 RAG-like Retrieval System
+
+Before calling the external API, the backend:
+
+- reads local recipes
+- scores relevance
+- returns best matches
+
+If no results are found:
+
+→ fallback to Spoonacular API
+
+This creates a simple RAG-style flow:
+
+- retrieve locally
+- augment externally
+
+---
+
+## 🍽️ Recipe Normalization
+
+All recipes are transformed into a consistent structure:
+
+- id
+- title
+- sourceUrl
+- summary
+- characteristicPhrase
+- ingredients
+- instructions
+- image
+- readyInMinutes
+- servings
+
+This ensures consistency and clean frontend rendering.
+
+---
+
+## 💻 Local Setup
+
+Clone repository:
+git clone https://github.com/treccaniandrea6-prog/pof-planty-of-food.git
+cd pof-planty-of-food
+
+Install backend:
+cd backend
+npm install
+
+Install frontend:
+cd ../frontend
+npm install
+
+Environment configuration:
+
+Create a `.env` file inside the backend folder:
+
+SPOONACULAR_API_KEY=your_api_key_here
+
+Run backend:
+cd backend
+npm run dev
+
+Run frontend:
+cd frontend
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Local URLs:
 
-## Code scaffolding
+Frontend:
+http://localhost:4200
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Backend:
+http://localhost:3000
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🚀 Deployment
 
-```bash
-ng generate --help
-```
+Frontend:
+https://pof-planty-frontend.netlify.app
 
-## Building
+Backend:
+https://pof-planty-of-food.onrender.com
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## ⚠️ Challenges Faced
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- Frontend/backend connection issues
+- API integration debugging
+- Environment variable setup
+- Git submodule / embedded repository bug
+- Netlify build errors
+- Render deployment configuration
+- Production API communication
 
-## Running unit tests
+---
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## 🔮 Future Improvements
 
-```bash
-ng test
-```
+- Loading spinner
+- Better error handling
+- Empty state UI
+- Advanced filtering
+- Improved memory logic
+- Better ranking system
+- UI/UX improvements
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+## 👤 Author
 
-```bash
-ng e2e
-```
+Andrea Treccani
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+GitHub:
+https://github.com/treccaniandrea6-prog

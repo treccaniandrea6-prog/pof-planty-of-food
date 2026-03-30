@@ -42,3 +42,14 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+.env
+backend/.env
+frontend/.env
+
+node_modules
+backend/node_modules
+frontend/node_modules
+
+node_modules/
+.env
