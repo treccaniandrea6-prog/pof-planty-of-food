@@ -60,8 +60,13 @@ type ChatResponse = {
             {{ msg.text }}
           </div>
 
+          <!-- LOADING -->
+          <div class="assistant-message" *ngIf="isLoading">
+            Thinking...
+          </div>
+
           <section class="recipes-section" *ngIf="recipes.length > 0">
-            <h2>Ricette trovate</h2>
+            <h2>Retrieved recipes</h2>
 
             <article class="recipe-card" *ngFor="let recipe of recipes">
               <img
@@ -79,7 +84,7 @@ type ChatResponse = {
                 </p>
 
                 <p class="recipe-summary">
-                  {{ recipe.summary || 'Nessun summary disponibile.' }}
+                  {{ recipe.summary || 'No summary available.' }}
                 </p>
 
                 <div class="recipe-meta">
@@ -87,12 +92,12 @@ type ChatResponse = {
                     ⏱ {{ recipe.readyInMinutes }} min
                   </span>
                   <span *ngIf="recipe.servings">
-                    👥 {{ recipe.servings }} porzioni
+                    👥 {{ recipe.servings }} servings
                   </span>
                 </div>
 
                 <div class="recipe-block">
-                  <strong>Ingredienti principali:</strong>
+                  <strong>Main ingredients:</strong>
                   <ul>
                     <li *ngFor="let ingredient of recipe.ingredients.slice(0, 5)">
                       {{ ingredient }}
@@ -101,7 +106,7 @@ type ChatResponse = {
                 </div>
 
                 <div class="recipe-block" *ngIf="recipe.instructions.length > 0">
-                  <strong>Primo step:</strong>
+                  <strong>First step:</strong>
                   <p>{{ recipe.instructions[0] }}</p>
                 </div>
 
@@ -111,7 +116,7 @@ type ChatResponse = {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Vai alla ricetta
+                  View recipe
                 </a>
               </div>
             </article>
@@ -121,11 +126,17 @@ type ChatResponse = {
         <section class="chat-input-area">
           <input
             type="text"
-            placeholder="Scrivi qui il tuo messaggio..."
+            placeholder="Type your message here..."
             [(ngModel)]="userInput"
             (keyup.enter)="sendMessage()"
+            [disabled]="isLoading"
           />
-          <button (click)="sendMessage()">Invia</button>
+          <button 
+            (click)="sendMessage()" 
+            [disabled]="isLoading || !userInput.trim()"
+          >
+            {{ isLoading ? 'Sending...' : 'Send' }}
+          </button>
         </section>
       </section>
     </main>
@@ -193,7 +204,6 @@ type ChatResponse = {
       background: #e8f5e9;
       color: #1f3b25;
       line-height: 1.5;
-      word-break: break-word;
       white-space: pre-wrap;
     }
 
@@ -205,7 +215,7 @@ type ChatResponse = {
       background: #c8e6c9;
       color: #1b5e20;
       line-height: 1.5;
-      word-break: break-word;
+      white-space: pre-wrap;
     }
 
     .recipes-section {
@@ -215,12 +225,6 @@ type ChatResponse = {
       gap: 16px;
     }
 
-    .recipes-section h2 {
-      margin: 8px 0 0;
-      color: #234b2c;
-      font-size: 22px;
-    }
-
     .recipe-card {
       display: flex;
       gap: 16px;
@@ -228,7 +232,6 @@ type ChatResponse = {
       border: 1px solid #dfe8d8;
       border-radius: 14px;
       background: #ffffff;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
     }
 
     .recipe-image {
@@ -236,70 +239,6 @@ type ChatResponse = {
       height: 130px;
       object-fit: cover;
       border-radius: 12px;
-      flex-shrink: 0;
-    }
-
-    .recipe-content {
-      flex: 1;
-    }
-
-    .recipe-content h3 {
-      margin: 0 0 8px 0;
-      color: #234b2c;
-    }
-
-    .characteristic-phrase {
-      margin: 0 0 10px 0;
-      font-style: italic;
-      color: #2f7d32;
-      line-height: 1.5;
-    }
-
-    .recipe-summary {
-      margin: 0 0 10px 0;
-      color: #37463a;
-      line-height: 1.5;
-    }
-
-    .recipe-meta {
-      display: flex;
-      gap: 16px;
-      margin-bottom: 12px;
-      color: #4b6b52;
-      font-size: 14px;
-    }
-
-    .recipe-block {
-      margin-bottom: 12px;
-    }
-
-    .recipe-block strong {
-      display: block;
-      margin-bottom: 6px;
-      color: #234b2c;
-    }
-
-    .recipe-block ul {
-      margin: 0;
-      padding-left: 18px;
-    }
-
-    .recipe-block p {
-      margin: 0;
-      line-height: 1.5;
-      color: #37463a;
-    }
-
-    .recipe-link {
-      display: inline-block;
-      margin-top: 6px;
-      color: #2f7d32;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .recipe-link:hover {
-      text-decoration: underline;
     }
 
     .chat-input-area {
@@ -307,7 +246,6 @@ type ChatResponse = {
       gap: 12px;
       padding: 20px 24px;
       border-top: 1px solid #e7efe3;
-      background: #ffffff;
     }
 
     .chat-input-area input {
@@ -315,7 +253,6 @@ type ChatResponse = {
       padding: 14px;
       border: 1px solid #cfd8cc;
       border-radius: 10px;
-      font-size: 16px;
     }
 
     .chat-input-area button {
@@ -328,34 +265,27 @@ type ChatResponse = {
       cursor: pointer;
     }
 
-    .chat-input-area button:hover {
-      opacity: 0.9;
-    }
-
-    @media (max-width: 768px) {
-      .recipe-card {
-        flex-direction: column;
-      }
-
-      .recipe-image {
-        width: 100%;
-        height: 200px;
-      }
+    .chat-input-area button:disabled {
+      background: #b5cbb5;
+      cursor: not-allowed;
     }
   `]
 })
 export class App implements OnInit {
   private readonly API_BASE_URL = 'http://localhost:3000';
 
-  message = 'Caricamento...';
+  message = 'Loading...';
   userInput = '';
   sessionId = 'session-001';
+  isLoading = false;
+
   messages: ChatMessage[] = [
     {
       sender: 'assistant',
-      text: 'Ciao! Sono il tuo assistente per ricette plant-based sostenibili.'
+      text: 'Hello! I am your assistant for sustainable plant-based recipes.'
     }
   ];
+
   recipes: Recipe[] = [];
 
   constructor(private http: HttpClient) {}
@@ -367,15 +297,14 @@ export class App implements OnInit {
           this.message = res.message;
         },
         error: () => {
-          this.message = 'Errore backend';
+          this.message = 'Backend error';
         }
       });
   }
 
   sendMessage() {
     const trimmedMessage = this.userInput.trim();
-
-    if (!trimmedMessage) return;
+    if (!trimmedMessage || this.isLoading) return;
 
     this.messages.push({
       sender: 'user',
@@ -384,6 +313,7 @@ export class App implements OnInit {
 
     this.userInput = '';
     this.recipes = [];
+    this.isLoading = true;
 
     this.http.post<ChatResponse>(`${this.API_BASE_URL}/api/chat`, {
       message: trimmedMessage,
@@ -396,12 +326,15 @@ export class App implements OnInit {
         });
 
         this.recipes = res.recipes || [];
+        this.isLoading = false;
       },
       error: () => {
         this.messages.push({
           sender: 'assistant',
-          text: 'Si è verificato un errore nella risposta del backend.'
+          text: 'An error occurred while processing the backend response.'
         });
+
+        this.isLoading = false;
       }
     });
   }
