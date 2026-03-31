@@ -60,7 +60,6 @@ type ChatResponse = {
             {{ msg.text }}
           </div>
 
-          <!-- LOADING -->
           <div class="assistant-message" *ngIf="isLoading">
             Thinking...
           </div>
@@ -131,8 +130,8 @@ type ChatResponse = {
             (keyup.enter)="sendMessage()"
             [disabled]="isLoading"
           />
-          <button 
-            (click)="sendMessage()" 
+          <button
+            (click)="sendMessage()"
             [disabled]="isLoading || !userInput.trim()"
           >
             {{ isLoading ? 'Sending...' : 'Send' }}
@@ -225,6 +224,12 @@ type ChatResponse = {
       gap: 16px;
     }
 
+    .recipes-section h2 {
+      margin: 8px 0 0;
+      color: #234b2c;
+      font-size: 22px;
+    }
+
     .recipe-card {
       display: flex;
       gap: 16px;
@@ -239,6 +244,70 @@ type ChatResponse = {
       height: 130px;
       object-fit: cover;
       border-radius: 12px;
+    }
+
+    .recipe-content {
+      flex: 1;
+    }
+
+    .recipe-content h3 {
+      margin: 0 0 8px 0;
+      color: #234b2c;
+    }
+
+    .characteristic-phrase {
+      margin: 0 0 10px 0;
+      font-style: italic;
+      color: #2f7d32;
+      line-height: 1.5;
+    }
+
+    .recipe-summary {
+      margin: 0 0 10px 0;
+      color: #37463a;
+      line-height: 1.5;
+    }
+
+    .recipe-meta {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 12px;
+      color: #4b6b52;
+      font-size: 14px;
+      flex-wrap: wrap;
+    }
+
+    .recipe-block {
+      margin-bottom: 12px;
+    }
+
+    .recipe-block strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #234b2c;
+    }
+
+    .recipe-block ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .recipe-block p {
+      margin: 0;
+      line-height: 1.5;
+      color: #37463a;
+    }
+
+    .recipe-link {
+      display: inline-block;
+      margin-top: 6px;
+      color: #2f7d32;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .recipe-link:hover {
+      text-decoration: underline;
     }
 
     .chat-input-area {
@@ -272,7 +341,7 @@ type ChatResponse = {
   `]
 })
 export class App implements OnInit {
-  private readonly API_BASE_URL = 'http://localhost:3000';
+  private readonly API_BASE_URL = 'https://pof-planty-of-food.onrender.com';
 
   message = 'Loading...';
   userInput = '';
